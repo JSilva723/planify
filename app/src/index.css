@@ -1,4 +1,12 @@
 :root {
-    background-color: black;
-    color: white;
+    --background-color: #000000;
+    --bg-container: #f3f3f3;
+    --progress: #43badb;
+    --bg-progress: #c3ccd8;
+    --incative: #b5abab;
+    --active: #9aa9b8;
+}
+
+body {
+    background-color: var(--background-color);
 }
