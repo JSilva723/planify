@@ -1,0 +1,11 @@
+.title{
+    font-size: large;
+}
+
+.container{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: 6px solid var(--bg-progress);
+    padding: 30px;
+    border-radius: 12px;
+}
