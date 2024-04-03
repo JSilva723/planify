@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack --config webpack.config",
-        "watch": "webpack --watch",
-        "dev": "npm run build && npm run watch & webpack serve --open",
+        "dev": "npm run build && webpack serve --open",
         "test": "jest"
     },
     "author": "Silva Jonatan",
