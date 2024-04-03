@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es6",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": [
+                "./src/components/*"
+            ]
+        }
+    },
+    "include": [
+        "src",
+        "globals.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
