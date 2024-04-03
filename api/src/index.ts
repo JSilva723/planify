@@ -1,7 +1,9 @@
 import 'dotenv/config'
 import { server } from './server'
 
-server().listen(3000, () => {
+const PORT = process.env.PORT || 3008
+
+server().listen(PORT, () => {
     //eslint-disable-next-line no-console
-    console.log('Listen on port: ' + 3000)
+    console.log('Listen on port: ' + PORT)
 })
