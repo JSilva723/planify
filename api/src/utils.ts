@@ -1,3 +1,5 @@
+import { IServiceAPI } from 'api-interfaces'
+
 export const slots = {
     'date': '2024-04-26',
     'serviceId': 3,
@@ -21,7 +23,7 @@ export const slots = {
     ]
 }
 
-export const services = [
+export const services: IServiceAPI[] = [
     {
         'id': 1,
         'name': 'Classic Manicure',

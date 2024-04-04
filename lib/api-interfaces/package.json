@@ -1,0 +1,8 @@
+{
+  "name": "api-interfaces",
+  "version": "1.0.0",
+  "description": "Interfaces common",
+  "main": "index.js",
+  "author": "Silva Jonatan",
+  "license": "ISC"
+}
