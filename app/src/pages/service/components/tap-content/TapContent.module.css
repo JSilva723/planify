@@ -5,7 +5,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    border: 6px solid var(--bg-progress);
+    border: 2px solid var(--bg-progress);
     border-radius: 12px;
     margin: 15px 0px;
     padding: 10px 15px;

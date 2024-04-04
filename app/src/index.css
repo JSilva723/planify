@@ -1,5 +1,4 @@
 :root {
-    --background-color: #000000;
     --bg-container: #f3f3f3;
     --progress: #43badb;
     --bg-progress: #c3ccd8;
@@ -8,6 +7,6 @@
     --active: #292e35;
 }
 
-body {
-    background-color: var(--background-color);
+body{
+    background-color: var(--bg-container);
 }
