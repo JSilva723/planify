@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid var(--bg-progress);
+    border-radius: 12px;
+    margin: 15px 0px;
+    padding: 10px 15px;
+}
+
+.card span {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+.card button {
+    padding: 0.5rem 1rem;
+    background-color: var(--inactive);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}

@@ -4,10 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const devMode = process.env.NODE_ENV !== 'production'
 
-const config = {
+module.exports = {
+
     mode: process.env.NODE_ENV,
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
@@ -43,6 +45,7 @@ const config = {
             template: path.resolve(__dirname, 'src', 'index.html')
         }),
         new CleanWebpackPlugin(),
+        new Dotenv({ path: path.resolve(__dirname, '.env')}),
     ].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
     devServer: !devMode ? false : {
         static: './dist',
@@ -56,4 +59,3 @@ const config = {
     }
 }
 
-module.exports = config
