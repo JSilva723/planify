@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     background-color: var(--bg-row);
     margin: 20px 0px;
@@ -6,4 +6,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+}
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
 }

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { FaPlus } from 'react-icons/fa'
 import styles from './TapItem.module.css'
 import { AccordionContext } from '../tap/Tap'
 
@@ -7,7 +8,12 @@ export const TapItem = ({ title }: { title: string }) => {
     return (
         <div className={styles.container}>
             <span>{title}</span>
-            <button onClick={() => setShow(!show)}>mas</button>
+            <button
+                className={styles.button}
+                onClick={() => setShow(!show)}
+            >
+                <FaPlus />
+            </button>
         </div>
     )
 }
