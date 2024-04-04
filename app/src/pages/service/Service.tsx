@@ -5,6 +5,7 @@ import { Title } from '@components/title/Title'
 import { Content } from '@components/content/Content'
 import { Section, useGetServices } from './hooks/useGetServices'
 import { Tap } from './components/tap/Tap'
+import { Paginator } from '@components/paginator/Paginator'
 
 export const Service = () => {
     const getServices = useGetServices()
@@ -31,6 +32,7 @@ export const Service = () => {
                     )
                 })}
             </Content>
+            <Paginator/>
         </Container>
     )
 }

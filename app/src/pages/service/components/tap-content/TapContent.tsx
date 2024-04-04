@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styles from './TapContent.module.css'
 import { Item } from '@pages/service/hooks/useGetServices'
 import { AccordionContext } from '../tap/Tap'
+import { Button } from '@components/button/Button'
 
 export const TAP_CONTENT_SELECT_BUTTON = 'Select'
 export const TAP_CONTAINER_ID = 'tap-container-id'
@@ -16,7 +17,7 @@ export const TapContent = ({ data }: { data: Item[] }) => {
                     <div key={id} className={styles.card}>
                         <span>{name}</span>
                         <span>{description}</span>
-                        <button>{TAP_CONTENT_SELECT_BUTTON}</button>
+                        <Button label={TAP_CONTENT_SELECT_BUTTON}/>
                     </div>
                 )
             })}
