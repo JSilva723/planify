@@ -4,3 +4,10 @@ export interface IServiceAPI {
     description: string
     category: string
 }
+
+export interface ISlotAPI {
+    date: string
+    serviceId: number
+    availableTimeslots: string[]
+}
+
