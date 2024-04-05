@@ -1,15 +1,10 @@
 import React from 'react'
 import styles from './Paginator.module.css'
-import { Button } from '@components/button/Button'
 
-const PREV = 'Prev'
-const NETX = 'Next'
-
-export const Paginator = () => {
+export const Paginator = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className={styles.container}>
-            <Button label={PREV} />
-            <Button label={NETX} active/>
+            {children}
         </div>
     )
 }

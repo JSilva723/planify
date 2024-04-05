@@ -5,9 +5,10 @@ interface ButtonProps {
     label: string
     active?: boolean
     end?: boolean
+    onClick: (v: unknown) => void
 }
 
-export const Button = ({ label, active, end }: ButtonProps) => {
+export const Button = ({ label, active, end, onClick }: ButtonProps) => {
     const buttonStyles = [
         styles.button,
         active && styles.active,
@@ -15,6 +16,11 @@ export const Button = ({ label, active, end }: ButtonProps) => {
     ].join(' ')
 
     return (
-        <button className={buttonStyles}>{label}</button>
+        <button
+            onClick={onClick}
+            className={buttonStyles}
+        >
+            {label}
+        </button>
     )
 }

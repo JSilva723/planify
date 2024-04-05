@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ProgressBar.module.css'
 
 interface ProgressBarProps {
-    step: 1 | 2 | 3 
+    step: number
 }
 
 const STEPS = 4
