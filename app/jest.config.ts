@@ -6,7 +6,7 @@ const jestConfig: JestConfigWithTsJest = {
     roots: ['<rootDir>'],
     modulePaths: [compilerOptions.baseUrl],
     moduleNameMapper: {
-        ...pathsToModuleNameMapper(compilerOptions.paths),
+        ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
         '.(css)$': "identity-obj-proxy"
     },
     transform: {
