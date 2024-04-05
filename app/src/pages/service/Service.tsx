@@ -7,6 +7,9 @@ import { Section, useGetServices } from './hooks/useGetServices'
 import { Tap } from './components/tap/Tap'
 import { Paginator } from '@components/paginator/Paginator'
 
+const SERVICE_TITTLE_PAGE = 'Select service'
+const SERVICE_TITLE_CONTENT = 'Categories'
+
 export const Service = () => {
     const getServices = useGetServices()
     const [servicesData, setServicesData] = useState<Section[]>([])
@@ -19,9 +22,9 @@ export const Service = () => {
 
     return (
         <Container>
-            <Title txt='Select service' />
+            <Title txt={SERVICE_TITTLE_PAGE} />
             <ProgressBar step={1} />
-            <Content title='Categories'>
+            <Content title={SERVICE_TITLE_CONTENT}>
                 {servicesData.map((section: Section) => {
                     return (
                         <Tap
@@ -32,7 +35,7 @@ export const Service = () => {
                     )
                 })}
             </Content>
-            <Paginator/>
+            <Paginator />
         </Container>
     )
 }
