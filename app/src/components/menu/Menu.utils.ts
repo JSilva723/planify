@@ -3,7 +3,7 @@ export const MY_TURNS = 'My turns'
 
 export const MENU_ITEMS = [
     {
-        path: '/service',
+        path: '/reserve',
         label: RESERVE
     }, {
         path: '/my-turns',

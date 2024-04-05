@@ -1,6 +1,6 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
-import { Item } from '@pages/service/hooks/useGetServices'
+import { Item } from '../../hooks/useGetServices'
 import { Tap } from './Tap'
 import { TAP_CONTAINER_ID, TAP_CONTENT_SELECT_BUTTON } from '../tap-content/TapContent'
 

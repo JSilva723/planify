@@ -8,7 +8,7 @@ const INGRESS = 'Welcome'
 export const Welcome = () => {
     return (
         <div className={styles.container}>
-            <Link to="service">
+            <Link to="reserve">
                 <Button label={INGRESS} />
             </Link>
         </div>

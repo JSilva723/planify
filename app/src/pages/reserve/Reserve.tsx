@@ -10,7 +10,7 @@ import { Paginator } from '@components/paginator/Paginator'
 const SERVICE_TITTLE_PAGE = 'Select service'
 const SERVICE_TITLE_CONTENT = 'Categories'
 
-export const Service = () => {
+export const Reserve = () => {
     const getServices = useGetServices()
     const [servicesData, setServicesData] = useState<Section[]>([])
 
