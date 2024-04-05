@@ -1,14 +1,13 @@
 import React from 'react'
-import { createHashRouter } from 'react-router-dom'
+import { Navigate, createHashRouter } from 'react-router-dom'
 import { NotFound } from '@pages/not-found/NotFound'
 import { MyTurns } from '@pages/my-turns/MyTurns'
-import { Welcome } from '@pages/welcome/Welcome'
 import { Reserve } from '@pages/reserve/Reserve'
 
 export const router = createHashRouter([
     {
         path: '/',
-        element: <Welcome />,
+        element: <Navigate to="reserve" replace/>,
         errorElement: <NotFound />
     },
     {

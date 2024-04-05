@@ -9,4 +9,5 @@
 
 body{
     background-color: var(--bg-container);
+    font-family: sans-serif;
 }
