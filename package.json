@@ -9,6 +9,7 @@
         "dev:app": "npm run dev --workspace=app",
         "test:app": "npm run test --workspace=app",
         "test:api": "npm run test --workspace=api",
+        "build": "npm run build --workspace=app",
         "prepare": "husky"
     },
     "keywords": [],

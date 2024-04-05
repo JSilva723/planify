@@ -9,7 +9,6 @@ const Dotenv = require('dotenv-webpack')
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-
     mode: process.env.NODE_ENV,
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
