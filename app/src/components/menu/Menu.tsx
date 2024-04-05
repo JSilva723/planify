@@ -3,7 +3,7 @@ import styles from './Menu.module.css'
 import { FaCoffee } from 'react-icons/fa'
 
 const RESERVE = 'Reserve'
-const MY_TURNS = 'Mis turnos'
+const MY_TURNS = 'My turns'
 
 export const Menu = () => {
     return (
