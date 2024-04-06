@@ -12,17 +12,15 @@ export const StepThree = () => {
     const navigate = useNavigate()
 
     const handleConfirm = () => {
-        localStorage.removeItem('service')
-        localStorage.removeItem('schedule')
-        localStorage.removeItem('step')
+        localStorage.clear()
         navigate('/my-turns')
     }
 
     return (
         <>
             <Content title={''}>
-                {service && <div>Service: {service.name}</div>}
-                {schedule && <div>Date: {schedule.date}</div>}
+                {service && <p><b>Service:</b> {service.name}</p>}
+                {schedule && <p><b>Date:</b> {schedule.date}</p>}
             </Content>
             <Paginator>
                 <Button

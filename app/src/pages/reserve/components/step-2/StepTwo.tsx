@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Content } from '@components/content/Content'
-import { ReserveContext } from '@pages/reserve/context/ReserveProvider'
+import { ReserveContext, Schedule } from '@pages/reserve/context/ReserveProvider'
 import { Slot, useGetSlots } from '@pages/reserve/hooks/useGetSlots'
 import { Button } from '@components/button/Button'
 import styles from './StepTwo.module.css'
@@ -23,13 +23,18 @@ export const StepTwo = () => {
             .catch(e => console.log(e)) //eslint-disable-line no-console
     }, [])
 
+    const handleSelect = (item: Schedule) => {
+        setSchedule(item)
+        localStorage.setItem('schedule', JSON.stringify(item))
+    }
+
     return (
         <>
             <Content title={SCHEDULE_TITLE_CONTENT}>
                 {slots.map((slot: Slot) => {
                     return (
                         <>
-                            <span>{slot.date}</span>
+                            <p>{slot.date}</p>
                             <div className={styles.container}>
                                 {
                                     slot.available.map((hour: string) => {
@@ -37,7 +42,7 @@ export const StepTwo = () => {
                                             <Button
                                                 key={hour + slot.date}
                                                 label={hour}
-                                                onClick={() => setSchedule({date: slot.date, hour})}
+                                                onClick={() => handleSelect({date: slot.date, hour})}
                                                 active={schedule
                                                     ? schedule.date === slot.date && schedule.hour === hour
                                                     : false

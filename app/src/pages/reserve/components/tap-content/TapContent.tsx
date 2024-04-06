@@ -10,15 +10,17 @@ export const TAP_CONTAINER_ID = 'tap-container-id'
 
 export const TapContent = ({ data }: { data: Item[] }) => {
     const { setService, service } = useContext(ReserveContext)
-    const { show } = useContext(AccordionContext)
+    const { show, title } = useContext(AccordionContext)
     if (data.length === 0 || !show) return null
 
     const handleSelect = (item: Item) => {
         if(service && service.id === item.id) {
             localStorage.removeItem('service')
+            localStorage.removeItem('tap')
             return setService(null)
         }
         localStorage.setItem('service', JSON.stringify(item))
+        localStorage.setItem('tap', JSON.stringify(title))
         setService(item)
     }
 

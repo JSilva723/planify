@@ -65,15 +65,17 @@ export const ReserveContext = createContext<TypeReserve>({
 export const ReserveProvider = ({ children }: { children: ReactNode }) => {
     const localStep = JSON.parse(localStorage.getItem('step') as '')
     const [step, setStep] = useState(localStep || STEPS[1])
-    const [service, setService] = useState<Service | null>(null)
-    const [schedule, setSchedule] = useState<Schedule | null>(null)
+    const localService = JSON.parse(localStorage.getItem('service') as '')
+    const [service, setService] = useState<Service | null>(localService)
+    const localSchedule = JSON.parse(localStorage.getItem('schedule') as '')
+    const [schedule, setSchedule] = useState<Schedule | null>(localSchedule)
 
     return (
         <ReserveContext.Provider
             value={{
                 step, setStep,
                 service, setService,
-                schedule, setSchedule
+                schedule, setSchedule,
             }}
         >
             <Container>

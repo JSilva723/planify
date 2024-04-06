@@ -11,18 +11,22 @@ interface AccordionProps {
 type TypeAccordion = {
     show: boolean
     setShow: Dispatch<SetStateAction<boolean>>
+    title: string
 }
 
 export const AccordionContext = createContext<TypeAccordion>({
     show: false,
-    setShow: () => { }
+    setShow: () => { },
+    title: ''
 })
 
 export const Tap = ({ title, data }: AccordionProps) => {
-    const [show, setShow] = useState(false)
+    const localTap = JSON.parse(localStorage.getItem('tap') as '')
+    const [show, setShow] = useState(title === localTap)
+
     return (
-        <AccordionContext.Provider value={{ show, setShow }}>
-            <TapItem title={title} />
+        <AccordionContext.Provider value={{ show, setShow, title }}>
+            <TapItem />
             <TapContent data={data} />
         </AccordionContext.Provider>
     )
