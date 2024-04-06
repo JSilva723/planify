@@ -1,14 +1,18 @@
 # Planify
 ### Start
+Step 1 - Install dependencies
 ```sh
 npm install
 ```
+Step 2 - Add env vars
 ```sh
 cp ./api/.env.example ./api/.env && cp ./app/.env.example ./app/.env  # required for webpack
 ```
+Step 3 - Up API 
 ```sh
 npm run dev:api # Up api in dev mode
 ```
+Step 4 - Up App
 ```sh
 npm run dev:app # Up app-web in dev mode
 ```

@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "webpack --config webpack.config.js",
-        "start": "npm run build &&node ./dist/server.js",
+        "dist": "NODE_ENV=production webpack",
+        "start": "npm run dist && node ./dist/server.js",
+        "build": "NODE_ENV=development webpack",
         "dev": "npm run build && nodemon ./dist/server.js & webpack --watch",
         "test": "jest"
     },
