@@ -30,7 +30,7 @@ export const TapContent = ({ data }: { data: Item[] }) => {
                 return (
                     <div key={item.id} className={styles.card}>
                         <span>{item.name}</span>
-                        <span>{item.description}</span>
+                        <p>{item.description}</p>
                         <Button
                             label={TAP_CONTENT_SELECT_BUTTON}
                             end

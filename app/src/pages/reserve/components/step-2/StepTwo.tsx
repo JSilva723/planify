@@ -42,7 +42,7 @@ export const StepTwo = () => {
                                             <Button
                                                 key={hour + slot.date}
                                                 label={hour}
-                                                onClick={() => handleSelect({date: slot.date, hour})}
+                                                onClick={() => handleSelect({ date: slot.date, hour })}
                                                 active={schedule
                                                     ? schedule.date === slot.date && schedule.hour === hour
                                                     : false
@@ -64,7 +64,7 @@ export const StepTwo = () => {
                 />
                 <Button
                     label="Next"
-                    onClick={() => goToStep(3)}
+                    onClick={schedule ? () => goToStep(3) : () => { }}
                     active={schedule ? true : false}
                 />
             </Paginator>
