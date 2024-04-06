@@ -1,4 +1,6 @@
 # Planify
+Functional but simplified version of the booking page following the flow provided.
+***
 ### Start
 Step 1 - Install dependencies
 ```sh
@@ -6,7 +8,7 @@ npm install
 ```
 Step 2 - Add env vars
 ```sh
-cp ./api/.env.example ./api/.env && cp ./app/.env.example ./app/.env  # required for webpack
+cp ./api/.env.example ./api/.env && cp ./app/.env.example ./app/.env
 ```
 Step 3 - Up API 
 ```sh
